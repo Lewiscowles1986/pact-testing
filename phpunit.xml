@@ -5,7 +5,7 @@
       <directory>./tests/Consumer</directory>
     </testsuite>
   </testsuites>
-  <listeners>
+  <!-- <listeners>
     <listener class="PhpPact\Consumer\Listener\PactTestListener">
         <arguments>
             <array>
@@ -15,7 +15,7 @@
             </array>
         </arguments>
     </listener>
-</listeners>
+</listeners> -->
   <php>
     <env name="PACT_MOCK_SERVER_HOST" value="localhost"/>
     <env name="PACT_MOCK_SERVER_PORT" value="7200"/>

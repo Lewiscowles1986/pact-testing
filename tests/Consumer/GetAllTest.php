@@ -9,38 +9,11 @@ use PhpPact\Consumer\InteractionBuilder;
 use PhpPact\Consumer\Matcher\Matcher;
 use PhpPact\Consumer\Model\ConsumerRequest;
 use PhpPact\Consumer\Model\ProviderResponse;
-use PhpPact\Standalone\MockService\MockServer;
 use PhpPact\Standalone\MockService\MockServerEnvConfig;
 use PHPUnit\Framework\TestCase;
 
 class GetAllTest extends TestCase
 {
-    public $server;
-
-    public function setUp(): void
-    {
-        $config = new MockServerEnvConfig();
-        // $config->setHost('localhost');
-        // $config->setPort(7200);
-        // $config->setConsumer('someConsumer');
-        // $config->setProvider('someProvider');
-        // $config->setCors(true);
-        // $config->setPactSpecificationVersion('2.0.0');
-        // $config->setHealthCheckTimeout(10);
-        // $config->setHealthCheckRetrySec(1);
-
-        $server = new MockServer($config);
-
-        $this->server = $server;
-
-        // Create the process.
-        $server->start();
-    }
-
-    public function tearDown(): void
-    {
-        $this->server->stop();
-    }
 
     /**
      * @test
