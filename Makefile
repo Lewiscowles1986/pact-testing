@@ -14,6 +14,6 @@ broker_down:
 	docker-compose down
 
 test:
-	vendor/bin/phpunit --verbose
+	vendor/bin/phpunit --verbose --testdox
 
 .PHONY: test
